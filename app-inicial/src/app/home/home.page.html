@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Aula Inicial
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <h1>Property Binding</h1>
+  <p [style]="fonte" (click)="alterarEstilo()">
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  </p>
+
+  <h1>Interpolação</h1>
+  <strong>Nome:</strong> {{nome}}<br>
+  <strong>Salário:</strong> {{salario}}<br>
+
+  <h1>Event Binding</h1>
+  <ion-button (click)="exibir()">Exibir</ion-button>
+
+  <h1>Two-way Binding</h1>
+  <ion-input label="Digite seu nome: " [(ngModel)]="nome"></ion-input>
+</ion-content>

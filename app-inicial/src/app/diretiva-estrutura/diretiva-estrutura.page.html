@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Diretiva de Estrutura</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  @for(item of numeros; track $index){
+  <p>
+    {{item}}
+  </p>
+  }
+
+  <ul>
+    <li>1</li>
+    @if (exibir > 100){
+       <li>2</li>
+    }   
+    <li>3</li>
+  </ul>
+
+  <ion-grid>
+       <ion-row>
+        <ion-col><strong>ID</strong></ion-col>
+        <ion-col><strong>Nome</strong></ion-col>
+        <ion-col><strong>Salário</strong></ion-col>
+        <ion-col> </ion-col>
+      </ion-row>
+    @for(item of objeto.funcionarios; track $index){
+      <ion-row>
+        <ion-col>{{item.id}}</ion-col>
+        <ion-col>{{item.nome}}</ion-col>
+        <ion-col>{{item.salario}}</ion-col>
+        <ion-col> <ion-button>Remover</ion-button></ion-col>
+      </ion-row>
+    }
+  </ion-grid>
+
+</ion-content>
