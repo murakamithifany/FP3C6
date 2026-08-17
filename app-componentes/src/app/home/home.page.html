@@ -16,8 +16,11 @@
     <ion-item>
       <ion-input label="Nome" [(ngModel)]="pessoa.nome"></ion-input>
     </ion-item>
-        <ion-item>
+    <ion-item>
       <ion-input label="Endereço" [(ngModel)]="pessoa.endereco"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Salário" type="number" [(ngModel)]="pessoa.salario"></ion-input>
     </ion-item>
   </ion-list>
 
@@ -28,14 +31,20 @@
     @if(pessoas.length>0){
     <ion-row>
       <ion-col><strong>Nome</strong></ion-col>
-       <ion-col><strong>Endereço</strong></ion-col>
-    </ion-row>    
+      <ion-col><strong>Endereço</strong></ion-col>
+      <ion-col><strong>Salário</strong></ion-col>
+      <ion-col></ion-col>
+    </ion-row>
     }
 
     @for(item of pessoas; track $index){
     <ion-row>
       <ion-col>{{item.nome}}</ion-col>
       <ion-col>{{item.endereco}}</ion-col>
+      <ion-col>R${{item.salario}}</ion-col>
+      <ion-col>
+        <ion-icon (click)="remover($index)" name="trash"> </ion-icon>
+      </ion-col>
     </ion-row>
     }
   </ion-grid>
