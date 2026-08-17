@@ -21,22 +21,29 @@ export class HomePage {
   private async exibirMensagem(mensagem: string) {
     const toast = await this.toastController.create({
       message: mensagem,
-      duration: 2500,
-      position: 'bottom',
+      duration: 3500,
+      position: 'middle',
     });
 
     await toast.present();
   }
 
   protected adicionarNos() {
-    this.placarN = this.placarN + 1;
+    if (this.placarN < 12) {
+      this.placarN = this.placarN + 1;
+      //console.log("Placar Nós:", this.placarN);
+    }
+
     if (this.placarN == 12) {
       this.exibirMensagem("Nós - VENCEDOR");
     }
   }
 
   protected adicionarEles() {
-    this.placarE = this.placarE + 1;
+    if(this.placarE < 12){
+      this.placarE = this.placarE + 1;
+    }
+    
     if (this.placarE == 12) {
       this.exibirMensagem("Eles - VENCEDOR");
     }
@@ -52,6 +59,11 @@ export class HomePage {
     if (this.placarE > 0) {
       this.placarE = this.placarE - 1;
     }
+  }
 
+  protected reiniciar(){
+    this.placarE = 0;
+    this.placarN = 0;
+    this.exibirMensagem("Partidade reiniciada!");
   }
 }
