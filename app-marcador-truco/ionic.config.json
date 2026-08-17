@@ -1,0 +1,7 @@
+{
+  "name": "app-marcador-truco",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

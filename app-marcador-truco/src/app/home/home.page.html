@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Marcador de Truco
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+
+    <ion-row>
+      <ion-col size="4">Nós</ion-col>
+      <ion-col size="4">Eles</ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="4">{{placarN}}</ion-col>
+      <ion-col size="4">{{placarE}}</ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="4">
+        <ion-button size="large" (click)="adicionarNos()">
+          <ion-icon name="add"></ion-icon> 1
+        </ion-button>
+      </ion-col>
+      <ion-col size="4">
+        <ion-button size="large" (click)="adicionarEles()">
+          <ion-icon name="add"></ion-icon> 1
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+        <ion-row>
+      <ion-col size="4">
+        <ion-button size="small" (click)="removerNos()" min="0">
+          <ion-icon name="remove"></ion-icon> 1
+        </ion-button>
+      </ion-col>
+      <ion-col size="4">
+        <ion-button size="small"(click)="removerEles()">
+          <ion-icon name="remove"></ion-icon> 1
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>
