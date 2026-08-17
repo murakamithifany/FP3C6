@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Componentes
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-button expand="block" (click)="exibir()">Exibir</ion-button>
+  <ion-button (click)="exibirCoracao()">
+    <ion-icon slot="icon-only" name="heart"></ion-icon>
+  </ion-button>
+
+  <ion-list>
+    <ion-item>
+      <ion-input label="Nome" [(ngModel)]="pessoa.nome"></ion-input>
+    </ion-item>
+        <ion-item>
+      <ion-input label="Endereço" [(ngModel)]="pessoa.endereco"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="block" (click)="adicionar()">Adicionar na Lista</ion-button>
+
+
+  <ion-grid>
+    @if(pessoas.length>0){
+    <ion-row>
+      <ion-col><strong>Nome</strong></ion-col>
+       <ion-col><strong>Endereço</strong></ion-col>
+    </ion-row>    
+    }
+
+    @for(item of pessoas; track $index){
+    <ion-row>
+      <ion-col>{{item.nome}}</ion-col>
+      <ion-col>{{item.endereco}}</ion-col>
+    </ion-row>
+    }
+  </ion-grid>
+
+</ion-content>
