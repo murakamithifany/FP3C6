@@ -1,0 +1,67 @@
+{
+  "users": [
+    {
+      "id": "2",
+      "email": "janet.weaver@reqres.in",
+      "first_name": "Janet",
+      "last_name": "Weaver",
+      "avatar": "https://reqres.in/img/faces/2-image.jpg"
+    },
+    {
+      "id": "4",
+      "email": "eve.holt@reqres.in",
+      "first_name": "Eve",
+      "last_name": "Holt",
+      "avatar": "https://reqres.in/img/faces/4-image.jpg"
+    },
+    {
+      "id": "5",
+      "email": "charles.morris@reqres.in",
+      "first_name": "Charles",
+      "last_name": "Morris",
+      "avatar": "https://reqres.in/img/faces/5-image.jpg"
+    },
+    {
+      "id": "6",
+      "email": "tracey.ramos@reqres.in",
+      "first_name": "Tracey",
+      "last_name": "Ramos",
+      "avatar": "https://reqres.in/img/faces/6-image.jpg"
+    },
+    {
+      "first_name": "Ana",
+      "last_name": "Silva",
+      "email": "ana@gmail.com",
+      "id": "xpzbXKnRmk0",
+      "avatar": null
+    },
+    {
+      "first_name": "João",
+      "last_name": "Santos",
+      "email": "joao@email.com",
+      "id": "QyQAFgWE5XY",
+      "avatar": null
+    },
+    {
+      "first_name": "Manoel",
+      "last_name": "Santos",
+      "email": "manoel@email.com",
+      "id": "Fn2g3tMwjtI",
+      "avatar": null
+    },
+    {
+      "first_name": "thifany",
+      "last_name": "Murakami",
+      "email": "murakami.thifany@aluno.ifsp.edu.br",
+      "id": "Eebeb5c",
+      "avatar": ""
+    },
+    {
+      "first_name": "mayumi",
+      "last_name": "cristo",
+      "email": "murakami.thifany@aluno.ifsp.edu.br",
+      "id": "XU9yGno",
+      "avatar": ""
+    }
+  ]
+}
