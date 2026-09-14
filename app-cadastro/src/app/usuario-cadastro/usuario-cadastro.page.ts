@@ -28,7 +28,7 @@ export class UsuarioCadastroPage implements OnInit {
     first_name: ['', [Validators.required, Validators.minLength(3)]],
     last_name: [''],
     email: [''],
-    id: [0],
+    id: [''],
     avatar: ['']
   })
 

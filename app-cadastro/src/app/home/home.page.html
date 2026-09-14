@@ -16,6 +16,9 @@
     @for(item of users(); track item.id) {
     <ion-item>
       <ion-label> {{ item.first_name }} </ion-label>
+      <ion-button color="warning" [routerLink]="['/usuario-alteracao', item.id]">
+        <ion-icon name="create-outline"></ion-icon>
+      </ion-button>
       <ion-button color="danger" (click)="remover(item.id)">
         <ion-icon name="trash-outline"></ion-icon>
       </ion-button>
@@ -23,5 +26,9 @@
     } @empty {
     <p>Lista vazia</p>
     }
+
+    <ion-alert [isOpen]="openAlert" header="Confirmação" [buttons]="alertButtons"
+      (didDismiss)="setOpen(false)"></ion-alert>
+
   </ion-list>
 </ion-content>

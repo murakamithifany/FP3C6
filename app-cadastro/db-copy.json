@@ -41,6 +41,13 @@
       "email": "email",
       "id": "Y9NJwMzQR0c",
       "avatar": ""
+    },
+    {
+      "first_name": "errwer",
+      "last_name": "rerer",
+      "email": "erere",
+      "id": "vk24vI8_wcI",
+      "avatar": ""
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

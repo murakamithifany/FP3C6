@@ -14,7 +14,7 @@ export class UsersService {
     return this.httpClient.get<User[]>(this.urlBase);
   }
 
-  public remover(id: number) {
+  public remover(id: string) {
     // return this.httpClient.delete(this.urlBase + '/' + id);
     return this.httpClient.delete<User>(`${this.urlBase}/${id}`);
   }
@@ -26,5 +26,15 @@ export class UsersService {
   public obterPeloNome(nome: string) {
     //GET http://localhost:3000/users?first_name:contains=xxxx
     return this.httpClient.get<User[]>(`${this.urlBase}?first_name:contains=${nome}`);
+  }
+
+  public obterPeloId(id:string){
+////GET http://localhost:3000/users/id
+return this.httpClient.get<User>(this.urlBase + '/' + id);
+}
+
+  public alterar(user: User) {
+    ////PUT http://localhost:3000/users/:id,dados-do-usuario
+    return this.httpClient.put(this.urlBase + '/' + user.id, user);
   }
 }
