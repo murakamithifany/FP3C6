@@ -73,12 +73,20 @@
       "fornecedor": "Mobile Center"
     },
     {
-      "id": "10",
-      "nome": "Webcam Logitech C920",
-      "categoria": "Periféricos",
-      "preco": 449.9,
+      "nome": "teste ALTERAÇÃO",
+      "categoria": "Eletrônicos",
+      "preco": 34,
+      "id": "u-s53RX",
       "quantidade": 3,
-      "fornecedor": "Global Tech"
+      "fornecedor": "tech"
+    },
+    {
+      "id": "cM_tbxi",
+      "nome": "mouseeee",
+      "categoria": "Periféricos",
+      "preco": 544,
+      "quantidade": 43,
+      "fornecedor": "tech"
     }
   ]
 }

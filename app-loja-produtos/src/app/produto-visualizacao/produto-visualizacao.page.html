@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Dados do Produto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form [formGroup]="form">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="3"><strong>Nome</strong></ion-col>
+        <ion-col>{{form.value.nome}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="3"><strong>Categoria</strong></ion-col>
+        <ion-col>{{form.value.categoria}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="3"><strong>Preço</strong></ion-col>
+        <ion-col>R$ {{form.value.preco}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="3"><strong>Quantidade</strong></ion-col>
+        <ion-col>{{form.value.quantidade}}</ion-col>
+      </ion-row>
+            <ion-row>
+        <ion-col size="3"><strong>Fornecedor</strong></ion-col>
+        <ion-col>{{form.value.fornecedor}}</ion-col>
+      </ion-row>
+      <ion-button routerLink="/home">
+        <ion-icon name="return-down-back-outline"></ion-icon>
+      </ion-button>
+    </ion-grid>
+  </form>
+</ion-content>

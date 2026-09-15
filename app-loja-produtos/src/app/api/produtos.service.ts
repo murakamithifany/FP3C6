@@ -25,8 +25,7 @@ export class ProdutosService {
     }
 
     public obterPeloNome(nome: string) {
-        //GET http://localhost:3000/users?first_name:contains=xxxx
-        return this.httpClient.get<Produto[]>(`${this.urlBase}?first_name:contains=${nome}`);
+        return this.httpClient.get<Produto[]>(`${this.urlBase}?nome:contains=${nome}`);
     }
 
     public obterPeloId(id: string) {
@@ -35,6 +34,10 @@ export class ProdutosService {
 
     public alterar(user: Produto) {
         return this.httpClient.put(this.urlBase + '/' + user.id, user);
+    }
+
+    public pesquisarNomeOuCategoria(descricao: string){
+        return this.httpClient.get<Produto[]>(`${this.urlBase}?nome:contains=${descricao}&categoria:contains=${descricao}`);
     }
 }
 
