@@ -45,16 +45,8 @@
       "nome": "Monitor LG UltraGear 24",
       "categoria": "Informática",
       "preco": 1199.9,
-      "quantidade": 6,
+      "quantidade": 3,
       "fornecedor": "Tech Distribuidora"
-    },
-    {
-      "id": "7",
-      "nome": "Smart TV TCL 50 Polegadas",
-      "categoria": "Áudio e Vídeo",
-      "preco": 2499.9,
-      "quantidade": 4,
-      "fornecedor": "Casa Digital"
     },
     {
       "id": "8",
@@ -68,24 +60,16 @@
       "id": "9",
       "nome": "Tablet Samsung Galaxy Tab A9",
       "categoria": "Eletrônicos",
-      "preco": 999.9,
+      "preco": 10,
       "quantidade": 12,
       "fornecedor": "Mobile Center"
     },
     {
+      "id": "u-s53RX",
       "nome": "teste ALTERAÇÃO",
       "categoria": "Eletrônicos",
-      "preco": 34,
-      "id": "u-s53RX",
-      "quantidade": 3,
-      "fornecedor": "tech"
-    },
-    {
-      "id": "cM_tbxi",
-      "nome": "mouseeee",
-      "categoria": "Periféricos",
-      "preco": 544,
-      "quantidade": 43,
+      "preco": 100,
+      "quantidade": 12,
       "fornecedor": "tech"
     }
   ]

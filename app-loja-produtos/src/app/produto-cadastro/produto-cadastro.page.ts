@@ -3,16 +3,17 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule, NonNullableFormBuilder, Validators } from '@angular/forms';
 import { IonInput, IonButton, IonItem, IonContent, IonHeader, IonTitle, IonToolbar, IonList, IonSelect, IonSelectOption, IonIcon } from '@ionic/angular';
 import { ProdutosService } from '../api/produtos.service';
-import { Router } from '@angular/router';
+import { Router,RouterLink } from '@angular/router';
 import { Produto } from '../modelo/produto-modelo';
 import { addIcons } from 'ionicons';
 import { checkmarkOutline, closeOutline } from 'ionicons/icons';
+import { ToastController } from '@ionic/angular/lazy';
 
 @Component({
   selector: 'app-produto-cadastro',
   templateUrl: './produto-cadastro.page.html',
   styleUrls: ['./produto-cadastro.page.scss'],
-  imports: [IonIcon, ReactiveFormsModule, IonInput, IonButton, IonItem, IonList, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonSelect, IonSelectOption]
+  imports: [RouterLink,IonIcon, ReactiveFormsModule, IonInput, IonButton, IonItem, IonList, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonSelect, IonSelectOption]
 })
 
 export class ProdutoCadastroPage implements OnInit {
@@ -27,6 +28,7 @@ export class ProdutoCadastroPage implements OnInit {
   private produtosService = inject(ProdutosService);
   private router = inject(Router);
   private formBuilder = inject(NonNullableFormBuilder);
+  private toastController: ToastController = inject(ToastController);
 
   protected categorias = [
     'Informática',
@@ -46,6 +48,15 @@ export class ProdutoCadastroPage implements OnInit {
     fornecedor: ['', [Validators.required, Validators.minLength(3)]]
   });
 
+    private async exibirMensagem(mensagem: string) {
+    const toast = await this.toastController.create({
+      message: mensagem,
+      duration: 3500,
+      position: 'middle',
+    });
+    await toast.present();
+  }
+
   protected cadastrar() {
     console.log(this.form.valid);
     if (this.form.valid) {
@@ -60,6 +71,7 @@ export class ProdutoCadastroPage implements OnInit {
         }
       })
     } else {
+      this.exibirMensagem("Preencha todos os campos!");
       console.log('Formulário inválido.');
     }
   }
