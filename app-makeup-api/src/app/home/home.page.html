@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Produtos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-searchbar placeholder="Brand" [(ngModel)]="marcaBuscada" ></ion-searchbar>
+  <ion-button (click)="pesquisar()">Buscar</ion-button>
+  <ion-grid>
+    <ion-row>
+      <ion-col>Brand</ion-col>
+      <ion-col>Quantity</ion-col>
+      <ion-col>Name Product</ion-col>
+      <ion-col>Biggest Price</ion-col>
+    </ion-row>
+
+    @for(item of produtos(); track item){
+
+    }
+
+  </ion-grid>
+</ion-content>
