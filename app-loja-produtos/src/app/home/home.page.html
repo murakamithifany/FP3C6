@@ -72,13 +72,13 @@
     </ion-row>
   </ion-grid>
   <div class="paginacao">
-    <ion-button (click)="paginaAnterior()" [disabled]="paginaAtual === 1">
+    <ion-button (click)="paginaAnterior()" [disabled]="paginaAtual() === 1">
       Anterior
     </ion-button>
     <span>
-      Página {{ paginaAtual }} de {{ totalPaginas() }}
+      Página {{ paginaAtual() }} de {{ totalPaginas() }}
     </span>
-    <ion-button (click)="proximaPagina()" [disabled]="paginaAtual === totalPaginas()">
+    <ion-button (click)="proximaPagina()" [disabled]="paginaAtual() === totalPaginas()">
       Próxima
     </ion-button>
   </div>

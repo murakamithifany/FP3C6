@@ -25,7 +25,7 @@ export class HomePage {
   protected quantidadeEstoque: number = 0;
   protected precoMedio: number = 0;
   protected ordenacao = '';
-  protected paginaAtual = 1;
+  protected paginaAtual = signal(1);
   protected itensPorPagina = 3;
 
   constructor() {
@@ -36,7 +36,7 @@ export class HomePage {
     this.obterProdutos();
     this.calcularEstoque();
     this.ordenacao = '';
-    this.paginaAtual = 1;
+    this.paginaAtual.set(1);
   }
 
   private obterProdutos() {
@@ -79,7 +79,7 @@ export class HomePage {
       lista.sort((a, b) => a.preco - b.preco);
     }
     this.produtos.set(lista);
-    this.paginaAtual=1;
+    this.paginaAtual.set(1);
   }
 
   protected setOpen(value: boolean) {
@@ -119,7 +119,7 @@ export class HomePage {
     const target = event.target as HTMLIonSearchbarElement;
     const query = target.value?.toLowerCase() || '';
 
-    this.paginaAtual=1;
+    this.paginaAtual.set(1);
 
     if (query === '') {
       this.obterProdutos();
@@ -138,7 +138,7 @@ export class HomePage {
   }
 
   protected paginacao = computed(() => {
-    const inicio = (this.paginaAtual - 1) * this.itensPorPagina;
+    const inicio = (this.paginaAtual() - 1) * this.itensPorPagina;
     const fim = inicio + this.itensPorPagina;
     return this.produtos().slice(inicio, fim);
   });
@@ -147,15 +147,15 @@ export class HomePage {
     return Math.ceil(this.produtos().length / this.itensPorPagina);
   });
 
-  protected paginaAnterior(){
-    if(this.paginaAtual>1){
-      this.paginaAtual--;
+  protected paginaAnterior() {
+    if (this.paginaAtual() > 1) {
+      this.paginaAtual.update(v => v - 1);
     }
   };
 
-  protected proximaPagina(){
-    if(this.paginaAtual<this.totalPaginas()){
-      this.paginaAtual++;
+  protected proximaPagina() {
+    if (this.paginaAtual() < this.totalPaginas()) {
+      this.paginaAtual.update(v => v + 1);
     }
   }
 
