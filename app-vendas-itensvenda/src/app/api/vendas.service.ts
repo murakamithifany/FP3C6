@@ -7,18 +7,17 @@ import { Venda } from '../modelo/venda-modelo';
     providedIn: 'root',
 })
 export class VendasService {
-    private httpClient =  inject(HttpClient);
+    private httpClient = inject(HttpClient);
     private urlBase = environment.api + '/vendas';
 
-    public obterTodos(){
+    public obterTodos() {
         return this.httpClient.get<Venda[]>(this.urlBase);
     }
 
-    public obterPeloId(id: string){
+    public obterPeloId(id: string) {
         return this.httpClient.get<Venda>(this.urlBase + '/' + id);
     }
-
-    public obterCliente(cliente: string){
-        return this.httpClient.get<Venda[]>(`${this.urlBase}?cliente:contains=${cliente}`)
+    public remover(id: string) {
+        return this.httpClient.delete<Venda>(`${this.urlBase}/${id}`);
     }
 }

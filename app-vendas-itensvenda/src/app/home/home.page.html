@@ -7,16 +7,23 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  @if(status()==='loading'){
+  <p>Carregando ...</p>
+  }
+  @if(status()==='error'){
+  <p>{{mensagemErro}}</p>
+  }
+  @if(status()==='sucess'){
   <ion-list>
     <ion-item>
-      <ion-select label="Venda" label-placement="cliente" (ionChange)="selecionarCliente($event)">
-        @for(venda of vendas(); track venda.cliente){
-        <ion-select-option [value]="venda">
+      <ion-select label="Venda" label-placement="cliente" (ionChange)="selecionarVenda($event.detail.value)">
+        @for(venda of vendas(); track venda.id){
+        <ion-select-option [value]="venda.id">
           {{venda.cliente}} - {{venda.data}}
         </ion-select-option>
         }
       </ion-select>
-      <ion-button>Excluir</ion-button>
+      <ion-button color="danger" (click)="remover(vendaSelecionada()!.id)">Excluir</ion-button>
     </ion-item>
   </ion-list>
 
@@ -28,17 +35,24 @@
       <ion-col> Subtotal </ion-col>
     </ion-row>
 
-    @for(item of itensVenda(); track item){
+    @if(vendaSelecionada()){
+    @for(item of vendaSelecionada()!.itens; track item.id){
     <ion-row>
       <ion-col><ion-label>{{item.produto}}</ion-label></ion-col>
       <ion-col><ion-label>{{item.quantidade}}</ion-label></ion-col>
-      <ion-col><ion-label>{{item.valorUnitario}}</ion-label></ion-col>
-      <ion-col><ion-label> </ion-label></ion-col>
+      <ion-col><ion-label>{{item.valorUnitario | currency }}</ion-label></ion-col>
+      <ion-col><ion-label>{{item.quantidade * item.valorUnitario | currency}} </ion-label></ion-col>
     </ion-row>
-    }@empty{
-    <p>Selecione uma venda</p>
     }
-
+    <p>Total = {{valorTotal | currency}}</p>
+    }@else{
+    <p>Selecione uma venda!</p>
+    }
   </ion-grid>
+
+  <ion-alert [isOpen]="openAlert" header="Confirmação" [buttons]="alertButtons"
+    (didDismiss)="setOpen(false)"></ion-alert>
+
+  }
 
 </ion-content>
