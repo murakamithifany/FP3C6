@@ -1,0 +1,7 @@
+{
+  "name": "app-vendas-itensvenda",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
