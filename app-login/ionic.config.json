@@ -1,0 +1,7 @@
+{
+  "name": "app-login",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
