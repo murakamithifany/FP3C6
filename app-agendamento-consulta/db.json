@@ -1,0 +1,393 @@
+{
+  "medicos": [
+    {
+      "id": "1",
+      "nome": "Carlos Henrique",
+      "especialidade": "Cardiologia",
+      "crm": "123456"
+    },
+    {
+      "id": "2",
+      "nome": "Mariana Alves",
+      "especialidade": "Pediatria",
+      "crm": "234567"
+    },
+    {
+      "id": "3",
+      "nome": "Ricardo Martins",
+      "especialidade": "Ortopedia",
+      "crm": "345678"
+    },
+    {
+      "id": "4",
+      "nome": "Fernanda Oliveira",
+      "especialidade": "Dermatologia",
+      "crm": "456789"
+    },
+    {
+      "id": "5",
+      "nome": "Eduardo Santos",
+      "especialidade": "Clínica Geral",
+      "crm": "567890"
+    },
+    {
+      "id": "6",
+      "nome": "Juliana Costa",
+      "especialidade": "Ginecologia",
+      "crm": "678901"
+    }
+  ],
+  "pacientes": [
+    {
+      "id": "1",
+      "nome": "João da Silva",
+      "cpf": "12345678900",
+      "telefone": "18999990001"
+    },
+    {
+      "id": "2",
+      "nome": "Maria Aparecida",
+      "cpf": "23456789011",
+      "telefone": "18999990002"
+    },
+    {
+      "id": "3",
+      "nome": "Pedro Henrique Souza",
+      "cpf": "34567890122",
+      "telefone": "18999990003"
+    },
+    {
+      "id": "4",
+      "nome": "Ana Beatriz Lima",
+      "cpf": "45678901233",
+      "telefone": "18999990004"
+    },
+    {
+      "id": "5",
+      "nome": "Lucas Gabriel Santos",
+      "cpf": "56789012344",
+      "telefone": "18999990005"
+    },
+    {
+      "id": "6",
+      "nome": "Camila Rodrigues",
+      "cpf": "67890123455",
+      "telefone": "18999990006"
+    },
+    {
+      "id": "7",
+      "nome": "Rafael Oliveira",
+      "cpf": "78901234566",
+      "telefone": "18999990007"
+    },
+    {
+      "id": "8",
+      "nome": "Beatriz Fernandes",
+      "cpf": "89012345677",
+      "telefone": "18999990008"
+    },
+    {
+      "id": "9",
+      "nome": "Gustavo Almeida",
+      "cpf": "90123456788",
+      "telefone": "18999990009"
+    },
+    {
+      "id": "10",
+      "nome": "Larissa Mendes",
+      "cpf": "01234567899",
+      "telefone": "18999990010"
+    }
+  ],
+  "agendamentos": [
+    {
+      "id": "1",
+      "data": "2026-10-05",
+      "horario": "08:00",
+      "observacoes": "Consulta de rotina.",
+      "status": "Agendado",
+      "medicoId": 1,
+      "pacienteId": 1
+    },
+    {
+      "id": "2",
+      "data": "2026-10-05",
+      "horario": "09:00",
+      "observacoes": "Avaliação cardiológica.",
+      "status": "Confirmado",
+      "medicoId": 1,
+      "pacienteId": 2
+    },
+    {
+      "id": "3",
+      "data": "2026-10-05",
+      "horario": "10:30",
+      "observacoes": "Primeira consulta.",
+      "status": "Agendado",
+      "medicoId": 2,
+      "pacienteId": 3
+    },
+    {
+      "id": "4",
+      "data": "2026-10-06",
+      "horario": "08:30",
+      "observacoes": "Consulta pediátrica.",
+      "status": "Confirmado",
+      "medicoId": 2,
+      "pacienteId": 4
+    },
+    {
+      "id": "5",
+      "data": "2026-10-06",
+      "horario": "14:00",
+      "observacoes": "Dor no joelho direito.",
+      "status": "Agendado",
+      "medicoId": 3,
+      "pacienteId": 5
+    },
+    {
+      "id": "6",
+      "data": "2026-10-07",
+      "horario": "09:30",
+      "observacoes": "Avaliação de lesão na pele.",
+      "status": "Agendado",
+      "medicoId": 4,
+      "pacienteId": 6
+    },
+    {
+      "id": "7",
+      "data": "2026-10-07",
+      "horario": "10:30",
+      "observacoes": "Consulta clínica.",
+      "status": "Concluído",
+      "medicoId": 5,
+      "pacienteId": 7
+    },
+    {
+      "id": "8",
+      "data": "2026-10-08",
+      "horario": "15:00",
+      "observacoes": "Consulta ginecológica.",
+      "status": "Confirmado",
+      "medicoId": 6,
+      "pacienteId": 8
+    },
+    {
+      "id": "9",
+      "data": "2026-10-09",
+      "horario": "08:00",
+      "observacoes": "Retorno após exames.",
+      "status": "Agendado",
+      "medicoId": 1,
+      "pacienteId": 9
+    },
+    {
+      "id": "10",
+      "data": "2026-10-09",
+      "horario": "09:30",
+      "observacoes": "Consulta de acompanhamento.",
+      "status": "Cancelado",
+      "medicoId": 2,
+      "pacienteId": 10
+    },
+    {
+      "id": "11",
+      "data": "2026-10-12",
+      "horario": "11:00",
+      "observacoes": "Avaliação ortopédica.",
+      "status": "Agendado",
+      "medicoId": 3,
+      "pacienteId": 1
+    },
+    {
+      "id": "12",
+      "data": "2026-10-12",
+      "horario": "14:30",
+      "observacoes": "Avaliação dermatológica.",
+      "status": "Agendado",
+      "medicoId": 4,
+      "pacienteId": 2
+    },
+    {
+      "id": "13",
+      "data": "2026-10-13",
+      "horario": "08:30",
+      "observacoes": "Consulta clínica de rotina.",
+      "status": "Confirmado",
+      "medicoId": 5,
+      "pacienteId": 3
+    },
+    {
+      "id": "14",
+      "data": "2026-10-14",
+      "horario": "13:30",
+      "observacoes": "Consulta ginecológica de rotina.",
+      "status": "Agendado",
+      "medicoId": 6,
+      "pacienteId": 4
+    },
+    {
+      "id": "15",
+      "data": "2026-10-15",
+      "horario": "14:30",
+      "observacoes": "Consulta de retorno.",
+      "status": "Agendado",
+      "medicoId": 1,
+      "pacienteId": 5
+    },
+    {
+      "id": "16",
+      "data": "2026-10-15",
+      "horario": "16:00",
+      "observacoes": "Avaliação cardiológica.",
+      "status": "Confirmado",
+      "medicoId": 1,
+      "pacienteId": 6
+    },
+    {
+      "id": "17",
+      "data": "2026-10-16",
+      "horario": "09:00",
+      "observacoes": "Acompanhamento pediátrico.",
+      "status": "Agendado",
+      "medicoId": 2,
+      "pacienteId": 7
+    },
+    {
+      "id": "18",
+      "data": "2026-10-16",
+      "horario": "10:00",
+      "observacoes": "Dor lombar.",
+      "status": "Agendado",
+      "medicoId": 3,
+      "pacienteId": 8
+    },
+    {
+      "id": "19",
+      "data": "2026-10-19",
+      "horario": "14:00",
+      "observacoes": "Retorno dermatológico.",
+      "status": "Agendado",
+      "medicoId": 4,
+      "pacienteId": 9
+    },
+    {
+      "id": "20",
+      "data": "2026-10-20",
+      "horario": "08:30",
+      "observacoes": "Consulta clínica.",
+      "status": "Confirmado",
+      "medicoId": 5,
+      "pacienteId": 10
+    },
+    {
+      "id": "21",
+      "data": "2026-10-20",
+      "horario": "15:30",
+      "observacoes": "Consulta de acompanhamento.",
+      "status": "Agendado",
+      "medicoId": 6,
+      "pacienteId": 1
+    },
+    {
+      "id": "22",
+      "data": "2026-10-21",
+      "horario": "10:00",
+      "observacoes": "Avaliação cardiológica.",
+      "status": "Agendado",
+      "medicoId": 1,
+      "pacienteId": 3
+    },
+    {
+      "id": "23",
+      "data": "2026-10-21",
+      "horario": "11:00",
+      "observacoes": "Consulta pediátrica.",
+      "status": "Cancelado",
+      "medicoId": 2,
+      "pacienteId": 5
+    },
+    {
+      "id": "24",
+      "data": "2026-10-22",
+      "horario": "14:30",
+      "observacoes": "Retorno ortopédico.",
+      "status": "Agendado",
+      "medicoId": 3,
+      "pacienteId": 6
+    },
+    {
+      "id": "25",
+      "data": "2026-10-23",
+      "horario": "09:30",
+      "observacoes": "Consulta dermatológica.",
+      "status": "Concluído",
+      "medicoId": 4,
+      "pacienteId": 7
+    },
+    {
+      "id": "26",
+      "data": "2026-10-23",
+      "horario": "10:30",
+      "observacoes": "Consulta clínica de retorno.",
+      "status": "Agendado",
+      "medicoId": 5,
+      "pacienteId": 8
+    },
+    {
+      "id": "27",
+      "data": "2026-10-26",
+      "horario": "08:00",
+      "observacoes": "Consulta ginecológica.",
+      "status": "Confirmado",
+      "medicoId": 6,
+      "pacienteId": 9
+    },
+    {
+      "id": "28",
+      "data": "2026-10-27",
+      "horario": "09:00",
+      "observacoes": "Consulta cardiológica.",
+      "status": "Agendado",
+      "medicoId": 1,
+      "pacienteId": 10
+    },
+    {
+      "id": "29",
+      "data": "2026-10-27",
+      "horario": "09:00",
+      "observacoes": "Consulta pediátrica.",
+      "status": "Agendado",
+      "medicoId": 2,
+      "pacienteId": 1
+    },
+    {
+      "id": "30",
+      "data": "2026-10-28",
+      "horario": "14:00",
+      "observacoes": "Avaliação ortopédica.",
+      "status": "Agendado",
+      "medicoId": 3,
+      "pacienteId": 2
+    },
+    {
+      "data": "20-10-2026",
+      "horario": "08:0",
+      "status": "confirmado",
+      "medicoId": "1",
+      "pacienteId": "3",
+      "observacoes": "sdsdsds",
+      "id": "QMkaio-YWtI"
+    },
+    {
+      "data": "2026-10-15",
+      "horario": "09:30",
+      "status": "agendado",
+      "medicoId": "4",
+      "pacienteId": "5",
+      "observacoes": "gfgfgfgfg",
+      "id": "u3lmqIXaIUE"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

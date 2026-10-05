@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button [routerLink]="['/agendamento-cadastro']">
+        <ion-icon slot="icon-only" name="add-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      Agendamentos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col>Data</ion-col>
+      <ion-col>Horário</ion-col>
+      <ion-col>Paciente</ion-col>
+      <ion-col>Médico</ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+
+    @for(item of agendamentos(); track item.id){
+    <ion-row>
+      <ion-col>{{item.data}}</ion-col>
+      <ion-col>{{item.horario}}</ion-col>
+      <ion-col>{{item.pacienteId}}</ion-col>
+      <ion-col>{{item.medicoId}}</ion-col>
+      <ion-col>
+        <ion-button [routerLink]="['/agendamento-detalhes', item.id]">
+          <ion-icon name="expand-outline"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    } @empty {
+      <p>Nenhum agendamento!</p>
+    }
+  </ion-grid>
+</ion-content>
